@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	<title>CRUD</title>
+	<script src = "crud.js"></script>
+</head>
+<body onload = "send_information()">
+	<div id="form_display">
+		
+	<form name = "item_details" id = "item_details">
+		<table bgcolor = "lightgray" cellpadding = "4" cellspacing = "4" align = "center" >
+			<tr><td><a>Item ID</a></td><td><input type = "text" name = "item_ID" id = "item_ID" width = "100%" required></td></tr>
+			<tr><td><a>Item name</a></td><td><input type = "text" name = "item_name" id = "item_name" required></td></tr>
+			<tr><td><a>Unit Price</a></td><td><input type = "text" name = "unit_price" id = "unit_price" required></td></tr>
+			<tr><td><a>Stock quantity</a></td><td><input type = "text" name = "stock_quantity" id = "stock_quantity" required></td></tr>
+			<tr><td><a>Supplier ID</a></td><td><input type = "text" name = "supplier_ID" id = "supplier_ID" value = "SP002" required></td></tr>
+			<tr><td  align = "right"><input type = "button" name = "add" value = "Add" onclick = "save_data_in_table()"></td>
+			<td align = "center"><input type = "button" name = "update" value = "Update" onclick = "change_data_in_table()"></td></tr>
+			<tr><td><a>Search</a></td><td><input type = "text" name = "item_ID_search" id = "item_ID_search" onkeyup = "send_information()"></td></tr>
+		</table>
+		<script type = "text/javascript" language = "JavaScript">
+			document.forms['item_details'].elements['item_ID'].focus();
+		</script>
+	</form>
+	</div>
+	<p></p>	
+		<a id = "display"> </a>
+</body>
+</html>
